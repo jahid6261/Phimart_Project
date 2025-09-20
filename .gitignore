@@ -3,3 +3,4 @@ token.json
 db.sqlite3
 .phi_env
 READ
+.env
