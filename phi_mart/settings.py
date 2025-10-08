@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'djoser',
+     "corsheaders",
     'api',
     'product',
     'users',
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+   "corsheaders.middleware.CorsMiddleware", 
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -67,6 +69,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'phi_mart.urls'
+
+
+CORS_ALLOWED_ORIGINS  = [
+   'http://localhost:5173',
+
+]
 
 TEMPLATES = [
     {
